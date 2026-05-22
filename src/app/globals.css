@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --emerald: #0f4c3a;
+  --emerald-light: #1a6b52;
+  --accent: #22c55e;
+  --off-white: #f8fafc;
+  --charcoal: #1e293b;
+  --slate-muted: #64748b;
+  --border: #e2e8f0;
+}
+
+@theme inline {
+  --color-emerald: #0f4c3a;
+  --color-emerald-light: #1a6b52;
+  --color-accent: #22c55e;
+  --color-off-white: #f8fafc;
+  --color-charcoal: #1e293b;
+  --color-slate-muted: #64748b;
+  --color-border: #e2e8f0;
+  --font-sans: var(--font-jakarta);
+  --font-display: var(--font-playfair);
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--off-white);
+  color: var(--charcoal);
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+}
+
+::selection {
+  background: #bbf7d0;
+  color: var(--emerald);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--emerald);
+  outline-offset: 0;
+}
+
+.heading-display {
+  @apply font-[family-name:var(--font-playfair)] font-bold tracking-tight text-emerald;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg bg-emerald px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-light;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-white px-6 py-3 text-sm font-semibold text-emerald transition hover:bg-off-white;
+}
+
+.section-pad {
+  @apply px-5 py-16 sm:px-8 sm:py-20 lg:px-10;
+}
+
+.input-field {
+  @apply w-full rounded-lg border border-border bg-white px-4 py-2.5 text-charcoal placeholder:text-slate-muted/80;
+}
+
+.label-field {
+  @apply mb-1.5 block text-sm font-semibold text-emerald;
+}
