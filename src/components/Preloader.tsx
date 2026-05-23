@@ -113,7 +113,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
         <MowerIcon className="h-14 w-28 drop-shadow-2xl sm:h-16 sm:w-32" />
       </div>
       <p className="absolute bottom-12 text-sm font-medium tracking-widest text-white/70">
-        WEBER
+        W
       </p>
     </div>
   );

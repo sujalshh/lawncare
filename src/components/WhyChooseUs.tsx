@@ -49,7 +49,7 @@ export function WhyChooseUs() {
             Why Choose Us
           </p>
           <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">
-            The Weber standard
+            The W standard
           </h2>
         </div>
 
