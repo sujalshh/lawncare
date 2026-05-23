@@ -110,7 +110,10 @@ export function BookingForm() {
       }
       if (!res.ok) throw new Error(data.error ?? "Something went wrong");
       setStatus("success");
-      setMessage(data.message);
+      setMessage(
+        data.message ??
+          "Your appointment request has been sent. We will confirm shortly!"
+      );
       setForm(initial);
     } catch (err) {
       setStatus("error");
