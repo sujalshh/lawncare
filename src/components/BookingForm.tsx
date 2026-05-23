@@ -102,7 +102,12 @@ export function BookingForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      const data = await res.json();
+      let data: { error?: string; message?: string } = {};
+      try {
+        data = await res.json();
+      } catch {
+        throw new Error("Server error. Please try again in a moment.");
+      }
       if (!res.ok) throw new Error(data.error ?? "Something went wrong");
       setStatus("success");
       setMessage(data.message);
@@ -319,9 +324,18 @@ export function BookingForm() {
       </Section>
 
       {status === "error" && (
-        <p className="rounded-lg bg-red-50 px-5 py-4 text-sm text-red-800">
-          {message}
-        </p>
+        <div className="rounded-lg border border-red-200 bg-red-50 px-5 py-4 text-sm text-red-900">
+          <p className="font-semibold">Could not send your request</p>
+          <p className="mt-2">{message}</p>
+          {message.includes("RESEND_API_KEY") && (
+            <p className="mt-3 text-red-800/90">
+              The site owner needs to add a Resend API key in{" "}
+              <code className="rounded bg-red-100 px-1">.env.local</code> (local)
+              or in the hosting dashboard (Vercel, etc.). See README in the
+              project repo.
+            </p>
+          )}
+        </div>
       )}
 
       <div className="rounded-xl border border-border bg-off-white px-6 py-6 sm:px-8 sm:py-7">

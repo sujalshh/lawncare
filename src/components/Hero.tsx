@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-const headline = "Meticulous Care. Masterpiece Lawns.";
+const headline = "We handle the ground. You enjoy the view";
 
 export function Hero({ ready }: { ready: boolean }) {
   const words = headline.split(" ");
