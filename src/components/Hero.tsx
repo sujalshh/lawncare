@@ -21,14 +21,6 @@ export function Hero({ ready }: { ready: boolean }) {
           initial={{ opacity: 0, y: 12 }}
           animate={ready ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.25, duration: 0.5 }}
-          className="mb-2 text-sm font-semibold uppercase tracking-widest text-white/70"
-        >
-          {BRAND.name}
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={ready ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.3, duration: 0.5 }}
           className="mb-6 text-base font-medium text-white/90 sm:text-lg"
         >
           {BRAND.legalName}
