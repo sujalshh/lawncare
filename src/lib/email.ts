@@ -2,7 +2,7 @@ import { Resend } from "resend";
 import { BRAND } from "@/lib/brand";
 import type { BookingPayload } from "@/types/booking";
 
-const BOOKING_TO = "sujalshah77715@gmail.com";
+const BOOKING_TO = "annaclaireweber33@gmail.com";
 
 function formatDate(iso: string) {
   try {

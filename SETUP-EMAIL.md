@@ -14,7 +14,7 @@ In the project folder (`ac-lawcare`), create `.env.local`:
 
 ```
 RESEND_API_KEY=re_your_actual_key_here
-RESEND_FROM_EMAIL=AC LawnCare <onboarding@resend.dev>
+RESEND_FROM_EMAIL=Weber Land Management <onboarding@resend.dev>
 ```
 
 **Restart the dev server** after saving:
@@ -25,7 +25,7 @@ npm run dev
 
 ## 3. Resend free tier note
 
-On the free plan you can send **from** `onboarding@resend.dev`. Emails can go to **sujalshah77715@gmail.com** once your Resend account uses that email, or after you verify a domain.
+On the free plan you can send **from** `onboarding@resend.dev`. Emails can go to **annaclaireweber33@gmail.com** once your Resend account uses that email, or after you verify a domain.
 
 If send fails with a domain error, verify your domain in Resend or use the email on your Resend account as the test recipient first.
 
@@ -40,4 +40,4 @@ Redeploy after saving.
 
 ## 5. Test
 
-Submit the form on `/book`. You should see “Request received” and get an email at **sujalshah77715@gmail.com**.
+Submit the form on `/book`. You should see “Request received” and get an email at **annaclaireweber33@gmail.com**.
