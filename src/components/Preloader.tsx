@@ -73,7 +73,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
     >
       {/* Site peek-through is handled by clipping the overlay */}
       <div
-        className="absolute inset-0 bg-emerald"
+        className="absolute inset-0 bg-black"
         style={{
           clipPath: `inset(0 0 0 ${clipLeft}%)`,
         }}
@@ -87,8 +87,8 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
       >
         <MowerIcon className="h-14 w-28 drop-shadow-2xl sm:h-16 sm:w-32" />
       </div>
-      <p className="absolute bottom-12 text-sm font-medium tracking-widest text-accent-bright/80">
-        AC LAWNCARE
+      <p className="absolute bottom-12 text-sm font-medium tracking-widest text-white/70">
+        WEBER
       </p>
     </div>
   );

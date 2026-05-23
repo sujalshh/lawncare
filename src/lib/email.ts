@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import { BRAND } from "@/lib/brand";
 import type { BookingPayload } from "@/types/booking";
 
 const BOOKING_TO = "sujalshah77715@gmail.com";
@@ -18,7 +19,7 @@ function formatDate(iso: string) {
 
 function buildText(data: BookingPayload) {
   return `
-AC LAWNCARE — NEW APPOINTMENT REQUEST
+${BRAND.legalName.toUpperCase()} — NEW SERVICE REQUEST
 =====================================
 Submitted: ${new Date().toLocaleString()}
 
@@ -77,9 +78,10 @@ function buildHtml(data: BookingPayload) {
 <body style="margin:0;padding:24px;background:#f8fafc;font-family:system-ui,sans-serif;">
   <table width="600" cellpadding="0" cellspacing="0" style="margin:0 auto;background:#fff;border-radius:12px;border:1px solid #e2e8f0;overflow:hidden;">
     <tr>
-      <td style="background:#0f4c3a;padding:24px 28px;">
-        <h1 style="margin:0;color:#fff;font-size:22px;">AC LawnCare</h1>
-        <p style="margin:6px 0 0;color:#d8f3dc;font-size:14px;">New appointment request</p>
+      <td style="background:#0a0a0a;padding:24px 28px;border-bottom:2px solid #dc2626;">
+        <h1 style="margin:0;color:#fff;font-size:22px;">${BRAND.name}</h1>
+        <p style="margin:6px 0 0;color:#a3a3a3;font-size:13px;">${BRAND.legalName}</p>
+        <p style="margin:12px 0 0;color:#fca5a5;font-size:14px;">New service request</p>
       </td>
     </tr>
     <tr>
@@ -101,14 +103,13 @@ export async function sendBookingEmail(data: BookingPayload) {
   }
 
   const resend = new Resend(apiKey);
-  const from =
-    process.env.RESEND_FROM_EMAIL ?? "AC LawnCare <onboarding@resend.dev>";
+  const from = process.env.RESEND_FROM_EMAIL ?? BRAND.emailFrom;
 
   const { error } = await resend.emails.send({
     from,
     to: BOOKING_TO,
     replyTo: data.email,
-    subject: `New Booking — ${data.fullName} | ${data.serviceType}`,
+    subject: `New Request — ${data.fullName} | ${data.serviceType}`,
     html: buildHtml(data),
     text: buildText(data),
   });

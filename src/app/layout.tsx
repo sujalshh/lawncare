@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import { BookBubble } from "@/components/BookBubble";
 import { Footer } from "@/components/Footer";
+import { BRAND } from "@/lib/brand";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -17,9 +18,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "AC LawnCare | Lawn Care & Landscaping",
-  description:
-    "Reliable lawn mowing, trimming, and yard maintenance. Book a visit online.",
+  title: `${BRAND.name} | Land Management Solutions`,
+  description: `${BRAND.legalName} — lawn care, landscaping, property cleanups, clearing, and full land management.`,
 };
 
 export default function RootLayout({

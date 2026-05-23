@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --emerald: #0f4c3a;
-  --emerald-light: #1a6b52;
-  --accent: #22c55e;
+  --emerald: #0a0a0a;
+  --emerald-light: #262626;
+  --accent: #dc2626;
   --off-white: #f8fafc;
   --charcoal: #1e293b;
   --slate-muted: #64748b;
@@ -11,9 +11,9 @@
 }
 
 @theme inline {
-  --color-emerald: #0f4c3a;
-  --color-emerald-light: #1a6b52;
-  --color-accent: #22c55e;
+  --color-emerald: #0a0a0a;
+  --color-emerald-light: #262626;
+  --color-accent: #dc2626;
   --color-off-white: #f8fafc;
   --color-charcoal: #1e293b;
   --color-slate-muted: #64748b;
@@ -34,14 +34,14 @@ body {
 }
 
 ::selection {
-  background: #bbf7d0;
+  background: #fecaca;
   color: var(--emerald);
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid var(--emerald);
+  outline: 2px solid var(--accent);
   outline-offset: 0;
 }
 
@@ -50,7 +50,7 @@ textarea:focus {
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center gap-2 rounded-lg bg-emerald px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-light;
+  @apply inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-red-700;
 }
 
 .btn-secondary {

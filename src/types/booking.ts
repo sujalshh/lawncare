@@ -14,21 +14,22 @@ export type BookingPayload = {
 };
 
 export const SERVICE_TYPES = [
-  "Standard Mowing",
-  "Full Lawn Maintenance",
-  "Landscaping & Design",
-  "Hedge Trimming",
-  "Seasonal Cleanup",
-  "Fertilization & Treatment",
-  "Irrigation Check",
-  "Custom Project",
+  "Lawn & Turf Maintenance",
+  "Landscape & Bed Care",
+  "Seasonal Property Cleanup",
+  "Brush & Lot Clearing",
+  "Mulching & Ground Cover",
+  "Irrigation & Drainage",
+  "Erosion & Grading Support",
+  "Full Property Management Visit",
+  "Custom Land Project",
 ] as const;
 
 export const PROPERTY_SIZES = [
-  "Small (under 5,000 sq ft)",
-  "Medium (5,000 – 15,000 sq ft)",
-  "Large (15,000 – 30,000 sq ft)",
-  "Estate (30,000+ sq ft)",
+  "Small (under 1/4 acre)",
+  "Medium (1/4 to 1/2 acre)",
+  "Large (1/2 to 1 acre)",
+  "Estate (1 acre+)",
 ] as const;
 
 export const TIME_SLOTS = [
@@ -44,4 +45,5 @@ export const FREQUENCIES = [
   "Weekly",
   "Bi-weekly",
   "Monthly",
+  "Seasonal contract",
 ] as const;

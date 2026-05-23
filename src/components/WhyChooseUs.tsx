@@ -5,15 +5,15 @@ import { useEffect, useRef, useState } from "react";
 const benefits = [
   {
     title: "Reliability",
-    text: "On-time visits and clear communication if weather changes your schedule.",
+    text: "Clear schedules, on-time crews, and proactive updates when weather or site conditions change your visit.",
   },
   {
-    title: "Eco-Friendly",
-    text: "Responsible products and practices that protect your soil and family.",
+    title: "Full-property focus",
+    text: "We look at the whole site — turf, beds, access, drainage, and seasonal needs — not just a quick mow.",
   },
   {
-    title: "Expert Crew",
-    text: "Trained specialists who treat every lawn with consistent attention to detail.",
+    title: "Experienced crew",
+    text: "Equipment and know-how for residential yards, larger lots, and ongoing land management contracts.",
   },
 ];
 
@@ -49,7 +49,7 @@ export function WhyChooseUs() {
             Why Choose Us
           </p>
           <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">
-            The AC LawnCare standard
+            The Weber standard
           </h2>
         </div>
 

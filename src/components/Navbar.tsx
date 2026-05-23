@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Leaf, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { BRAND } from "@/lib/brand";
 
 const links = [
   { href: "/", label: "Home" },
@@ -23,12 +24,12 @@ export function Navbar({ ready = true }: { ready?: boolean }) {
       className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-white"
     >
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4 sm:px-8">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald/10">
-            <Leaf className="h-5 w-5 text-emerald" />
+        <Link href="/" className="flex flex-col leading-tight">
+          <span className="font-[family-name:var(--font-playfair)] text-xl font-bold text-emerald">
+            {BRAND.name}
           </span>
-          <span className="font-[family-name:var(--font-playfair)] text-lg font-bold text-emerald">
-            AC LawnCare
+          <span className="hidden text-[10px] font-medium uppercase tracking-wide text-slate-muted sm:block">
+            Land Management Solutions
           </span>
         </Link>
 
@@ -45,7 +46,7 @@ export function Navbar({ ready = true }: { ready?: boolean }) {
           ))}
           <li className="ml-2">
             <Link href="/book" className="btn-primary py-2.5 text-sm">
-              Book a Service
+              Request a Visit
             </Link>
           </li>
         </ul>
